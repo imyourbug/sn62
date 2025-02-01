@@ -143,6 +143,8 @@ def generate_code_patch(
         return_type="info_trajectory",
     )
     duration_s = time.time() - start_time
+    print(f"info: {info}")
+    print(f"trajectory_steps: {trajectory_steps}")
 
     if info.get("submission") is None:
         raise ValueError(f"SWE-agent failed to submit. Ran for {duration_s:.2f}s. Info: {pformat(info)}")
